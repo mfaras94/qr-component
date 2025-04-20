@@ -10,51 +10,61 @@
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap"
     />
     <style>
-      *{
+      :root {
+        --font-family: "Outfit", sans-serif;
+        --bg-color: hsl(212, 45%, 89%);
+        --card-bg: #ffffff;
+        --shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        --border-radius: 20px;
+        --qr-radius: 10px;
+        --title-color: hsl(218, 44%, 22%);
+        --text-color: hsl(216, 15%, 48%);
+      }
+
+      * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
-      body {
-      
 
-    
-        font-family: "Outfit", sans-serif;
+      body {
+        font-family: var(--font-family);
       }
 
-      main{
-  
-           
+      main {
         height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: hsl(212, 45%, 89%);
-
+        background-color: var(--bg-color);
       }
+
       .container {
         padding: 16px 16px 40px;
-        background-color: white;
-        border-radius: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        background-color: var(--card-bg);
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
         max-width: 320px;
-  
       }
+
       .card {
         text-align: center;
       }
+
       .qr-code {
         width: 100%;
-        border-radius: 10px;
+        border-radius: var(--qr-radius);
       }
+
       h1 {
         font-size: 1.5em;
         margin-top: 24px;
         line-height: 120%;
-        color: hsl(218, 44%, 22%);
+        color: var(--title-color);
       }
+
       p {
-        color: hsl(216, 15%, 48%);
+        color: var(--text-color);
         margin-top: 16px;
         line-height: 140%;
       }
@@ -62,16 +72,22 @@
   </head>
   <body>
     <main>
-    <div class="container">
-      <div class="card">
-        <img src="./images/image-qr-code.png" alt="QR Code" class="qr-code" />
-        <h1>Improve your front-end<br />skills by building projects</h1>
-        <p>
-          Scan the QR code to visit Frontend<br />Mentor and take your coding
-          skills to<br />the next level
-        </p>
+      <div class="container" role="region" aria-labelledby="qr-title">
+        <div class="card">
+          <img
+            src="./images/image-qr-code.png"
+            alt="QR code linking to Frontend Mentor"
+            class="qr-code"
+          />
+          <h1 id="qr-title">
+            Improve your front-end<br />skills by building projects
+          </h1>
+          <p>
+            Scan the QR code to visit Frontend<br />Mentor and take your coding
+            skills to<br />the next level
+          </p>
+        </div>
       </div>
-    </div>
-  </main>
+    </main>
   </body>
 </html>
