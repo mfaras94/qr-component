@@ -10,21 +10,35 @@
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap"
     />
     <style>
-      body {
+      *{
+        margin: 0;
+        padding: 0;
         box-sizing: border-box;
+      }
+      body {
+      
+
+    
+        font-family: "Outfit", sans-serif;
+      }
+
+      main{
+  
+           
+        height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
         background-color: hsl(212, 45%, 89%);
-        font-family: "Outfit", sans-serif;
+
       }
       .container {
         padding: 16px 16px 40px;
         background-color: white;
-        border-radius: 10px;
+        border-radius: 20px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         max-width: 320px;
+  
       }
       .card {
         text-align: center;
@@ -41,11 +55,13 @@
       }
       p {
         color: hsl(216, 15%, 48%);
+        margin-top: 16px;
         line-height: 140%;
       }
     </style>
   </head>
   <body>
+    <main>
     <div class="container">
       <div class="card">
         <img src="./images/image-qr-code.png" alt="QR Code" class="qr-code" />
@@ -56,5 +72,6 @@
         </p>
       </div>
     </div>
+  </main>
   </body>
 </html>
