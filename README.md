@@ -1,1 +1,1 @@
-# qr-component
+# QR Component HTML and CSS
