@@ -40,11 +40,12 @@
       }
 
       .container {
-        padding: 16px 16px 40px;
+        padding: 16px 16px 40px 16px ;
         background-color: var(--card-bg);
         border-radius: var(--border-radius);
         box-shadow: var(--shadow);
-        max-width: 320px;
+        width: 320px;
+        height: 499px;
       }
 
       .card {
@@ -52,20 +53,23 @@
       }
 
       .qr-code {
-        width: 100%;
+        width: 288px;
+        height: 288px;
         border-radius: var(--qr-radius);
       }
-
+      .text {
+        padding: 24px 16px 0 16px;
+       }
       h1 {
-        font-size: 1.5em;
-        margin-top: 24px;
+        font-size: 22px;
         line-height: 120%;
         color: var(--title-color);
+        margin-bottom: 16px;
       }
 
       p {
+        font-size: 15px;
         color: var(--text-color);
-        margin-top: 16px;
         line-height: 140%;
       }
     </style>
@@ -79,13 +83,15 @@
             alt="QR code linking to Frontend Mentor"
             class="qr-code"
           />
-          <h1 id="qr-title">
-            Improve your front-end<br />skills by building projects
+          <div class="text">
+          <h1>
+            Improve your front-end skills by building projects
           </h1>
           <p>
-            Scan the QR code to visit Frontend<br />Mentor and take your coding
-            skills to<br />the next level
+            Scan the QR code to visit Frontend Mentor and take your coding
+            skills to the next level
           </p>
+        </div>
         </div>
       </div>
     </main>
